@@ -1,0 +1,24 @@
+@import '../mixins/index';
+
+.constructor {
+    @include flex(flex-start, stretch);
+
+    border-radius: 4px;
+    background: #f7f7f9;
+    width: 1200px;
+    height: 700px;
+
+    .c-body {
+        flex-grow: 1;
+        padding: 50px 45px;
+        border-radius: 4px 0 0 4px;
+    }
+
+    .c-sidebar {
+        background: #FFF;
+        max-width: 400px;
+        padding: 50px 45px;
+        border-radius: 0 4px 4px 0;
+        flex-grow: 1;
+    }
+}
