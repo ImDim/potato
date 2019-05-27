@@ -5,20 +5,7 @@ html(lang="en")
         block title
             title Look
 
-    body.flex.flex-center
-
-        .constructor
-            .c-body
-
-            .c-sidebar
-
-                .c-sidebar-header
-                    .c-sidebar-header__inner
-                        a.c-sidebar-header__back(href="#") 
-                            |Back
-
-                    .c-sidebar-header__inner
-                        h3.c-sidebar-header__title
-                            |Категория
-
-                .c-sidebar-body
+    body
+        .wrapper.flex.flex-center
+            //include ../common/recipe.pug
+            include ../common/steps.pug

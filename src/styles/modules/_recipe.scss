@@ -1,0 +1,104 @@
+.recipe {
+    min-height: 100vh;
+
+    &-content {
+        @include flex(center, center);
+        position: relative;
+        flex-direction: column;
+        text-align: center;
+        z-index: 1;
+        min-height: 800px;
+
+        &::after {
+            content: "";
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background-image: 
+              radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.75), #100e17),
+              url(../assets/images/recipe-cover.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.75;
+        }
+    }
+    
+    &-img {
+        @include flex(center, center);
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &-title {
+        text-align: center;
+        //font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-top: 30px;
+    
+        background: $firstGradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        text-shadow: none;
+    }
+
+    &-desc {
+        width: 600px;
+        color: $color1;
+        line-height: 26px;
+        margin-bottom: 0;
+    }
+
+    &-start {
+        width: 100px;
+        text-align: center;
+    }
+}
+
+.ing-list {
+    @include flex(center, center);
+    max-width: 550px;
+    list-style: none;
+    margin-bottom: 25px;
+
+    &-item {
+        margin-right: 25px;
+        color: $color1;
+
+        &:nth-child(odd) {
+            color: $color2;
+            .ing-list-link {
+                &::before {
+                    background: $color4;
+                }
+            }
+        }
+    }
+
+    &-link {
+        @include flex(flex-start, center);
+        text-decoration: none;
+        color: inherit;
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 7px;
+
+        &::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: $color3;
+            border-radius: 100%;
+            margin-right: 7px;
+        }
+    }
+}
