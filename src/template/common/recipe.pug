@@ -53,5 +53,12 @@
                     |По вкусу чёрный молотый перец, красный молотый перец
                     |растительное масло
 
-        a(href="#").btn.btn-tablet.btn-primary.btn-shadow.recipe-start
-            |Начать
+        a(href="#").btn.btn-tablet.btn-primary.btn-shadow.recipe-start.js-recipe-start
+            i.fas.fa-fire-alt
+            span Начать
+
+        a(href="#").btn.btn-text.recipe-start.recipe-start--started.js-recipe-started
+            i.fas.fa-hand-peace
+            span Удачи !
+
+        include ../common/steps.pug

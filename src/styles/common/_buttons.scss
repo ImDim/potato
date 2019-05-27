@@ -24,15 +24,19 @@
 
     color: inherit;
 
-    .icon {
-        font-size: 7px;
+    .icon, .fab, .fas {
+        font-size: 12px;
     }
 
-    .icon:first-child {
-        margin-right: 5px;
+    .icon:first-child, 
+    .fab:first-child, 
+    .fas:first-child {
+        margin-right: 10px;
     }
-    .icon:last-child {
-        margin-left: 5px;
+    .icon:last-child
+    .fab:last-child, 
+    .fas:last-child {
+        margin-left: 10px;
     }
 
     &-icon {
@@ -99,6 +103,13 @@
 
     &-icon.btn-small {
         width: 20px;
+    }
+
+    &-text {
+        background: transparent;
+        border: transparent;
+        box-shadow: none;
+        color: $color2;
     }
 }
 
