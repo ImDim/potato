@@ -1,19 +1,21 @@
 .recipe.flex.flex-center
-    .recipe-content
-        .recipe-img
-            img(
-                src="/assets/images/recipe-img.jpg"
-                alt="Куриное филе в азиатском стиле основное фото рецепта" 
-                width="700"
-                height="500"
-            )
+    .recipe-content.js-recipe-content
+        .recipe-inner
+            .recipe-img
+                img(
+                    src="/assets/images/recipe-img.jpg"
+                    alt="Куриное филе в азиатском стиле основное фото рецепта" 
+                    width="700"
+                    height="500"
+                )
 
-        h1.recipe-title
-            |Куриное филе в азиатском стиле
+            .recipe-info
+                h1.recipe-title
+                    |Куриное филе в азиатском стиле
 
-        p.recipe-desc
-            |Куриное филе, приготовленное по этому рецепту, получается 
-            |необычайно сочным, нежным, с пряным кисло-сладким вкусом.
+                p.recipe-desc
+                    |Куриное филе, приготовленное по этому рецепту, получается 
+                    |необычайно сочным, нежным, с пряным кисло-сладким вкусом.
 
         ul.ing-list
             li.ing-list-item
@@ -62,3 +64,5 @@
             span Удачи !
 
         include ../common/steps.pug
+
+        include ../common/author.pug

@@ -5,6 +5,7 @@
     transition: all 1s ease .7s;
     overflow: hidden;
     max-height: 0;
+    padding: 0;
     
     &--visible {
         max-height: 1200px;

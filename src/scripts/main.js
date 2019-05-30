@@ -14,6 +14,8 @@ $(function() {
 
         // Показываем шаги
         $('.js-steps').addClass('steps--visible');
+
+        $('.js-recipe-content').addClass('recipe-content--inline');
     });
 
     // Обработчик по шагам

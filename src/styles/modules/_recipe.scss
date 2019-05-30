@@ -1,3 +1,39 @@
+$inlineTransition: all .5s ease;
+
+@keyframes moveImg {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+
+        width: 150px;
+        height: 150px;
+        left: 50%;
+        margin-left: -75px;
+    }
+
+    35% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    75% {
+        transform: scale(0);
+        opacity: 0;
+
+        width: 150px;
+        height: 150px;
+        left: 50%;
+        margin-left: -75px;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        top: 0;
+        left: 0;
+    }
+}
+
 .recipe {
     min-height: calc(100vh - 80px);
     padding: 40px 0;
@@ -35,6 +71,16 @@
         height: 150px;
         border-radius: 100%;
         overflow: hidden;
+        position: absolute;
+
+        transform-origin: center;
+
+        top: -150px;
+        left: 50%;
+        margin-left: -75px;
+
+        //transition: $inlineTransition;
+        //transition-delay: .2s;
 
         img {
             height: 100%;
@@ -87,13 +133,61 @@
             transform: translateY(0px);
         }
     }
+
+    &-inner {
+        margin-left: 0;
+        transition: $inlineTransition;
+        position: relative;
+    }
+
+    &-content--inline {
+        position: relative;
+        
+        .recipe-inner {
+            @include flex;
+            position: relative;
+            flex-direction: row;
+            text-align: left;
+            
+            .recipe-img {
+                width: 100px;
+                height: 100px;
+                margin-left: 0;
+                animation: moveImg 1s ease forwards;
+            }
+
+            .recipe-info {
+                margin-left: 130px;
+            }
+
+            .recipe-title {
+                margin-top: 0;
+                text-align: left;
+            }
+        }
+
+        .author {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        .ing-list {
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-left: 77px;
+        }
+    }
 }
 
 .ing-list {
     @include flex(center, center);
     max-width: 550px;
     list-style: none;
+    padding: 0;
     margin-bottom: 25px;
+
+    transition: $inlineTransition;
 
     &-item {
         margin-right: 25px;
